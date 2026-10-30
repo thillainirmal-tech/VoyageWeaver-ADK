@@ -26,7 +26,9 @@ public class SecurityConfiguration {
     SecurityFilterChain security(HttpSecurity http, @Value("${voyage.security.api-key}") String expectedKey) throws Exception {
         return http.csrf(csrf -> csrf.disable())
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(a -> a.requestMatchers("/actuator/health/**", "/actuator/prometheus").permitAll().anyRequest().authenticated())
+                .authorizeHttpRequests(a -> a
+                        .requestMatchers("/", "/index.html", "/favicon.ico", "/actuator/health/**", "/actuator/prometheus").permitAll()
+                        .anyRequest().authenticated())
                 .addFilterBefore(new ApiKeyFilter(expectedKey), UsernamePasswordAuthenticationFilter.class)
                 .build();
     }

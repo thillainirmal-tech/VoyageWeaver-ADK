@@ -4,6 +4,14 @@ VoyageWeaver is an original, API-first travel-planning system built with **Googl
 
 This is not a booking engine and never pretends that model-generated prices, availability, visa rules, or safety advice are live facts. Every plan labels estimates and gives the traveller a verification checklist.
 
+## Product tour
+
+![VoyageWeaver ADK multi-agent planning console](docs/media/product-tour.gif)
+
+[Open the full-resolution screenshot](docs/media/product-console.jpg) · **Recruiter demo:** submit an authenticated trip brief, show five-agent delegation, inspect the verification checklist, then retrieve the persisted plan.
+
+> **Deployment status:** tested, containerized and ready for an AWS deployment with managed PostgreSQL and secrets; Gemini execution requires operator-supplied credentials and no public production endpoint is claimed yet.
+
 ## Production-oriented capabilities
 
 - Real Google ADK multi-agent orchestration using agent-as-tool delegation
