@@ -10,6 +10,8 @@ This is not a booking engine and never pretends that model-generated prices, ava
 
 [Open the full-resolution screenshot](docs/media/product-console.jpg) · **Recruiter demo:** submit an authenticated trip brief, show five-agent delegation, inspect the verification checklist, then retrieve the persisted plan.
 
+[▶ Watch the recorded PostgreSQL-backed runtime check (5 seconds)](docs/media/runtime-demo.mp4)
+
 > **Deployment status:** tested, containerized and ready for an AWS deployment with managed PostgreSQL and secrets; Gemini execution requires operator-supplied credentials and no public production endpoint is claimed yet.
 
 ## Production-oriented capabilities

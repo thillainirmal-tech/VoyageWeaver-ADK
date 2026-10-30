@@ -19,8 +19,8 @@ services:
       DATABASE_USERNAME: voyageweaver
       DATABASE_PASSWORD: ${DATABASE_PASSWORD:?set DATABASE_PASSWORD}
       VOYAGE_API_KEY: ${VOYAGE_API_KEY:?set VOYAGE_API_KEY}
-      VOYAGE_AI_ENABLED: "true"
-      GOOGLE_API_KEY: ${GOOGLE_API_KEY:?set GOOGLE_API_KEY}
+      VOYAGE_AI_ENABLED: ${VOYAGE_AI_ENABLED:-false}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-disabled}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
     depends_on:
       postgres:

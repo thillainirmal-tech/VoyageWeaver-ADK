@@ -20,6 +20,7 @@ public class TravelPlanningService {
     private final ObjectMapper objectMapper;
     private final Clock clock;
 
+    @org.springframework.beans.factory.annotation.Autowired
     public TravelPlanningService(TravelPlannerGateway planner, TripPlanRepository repository, ObjectMapper objectMapper) {
         this(planner, repository, objectMapper, Clock.systemUTC());
     }

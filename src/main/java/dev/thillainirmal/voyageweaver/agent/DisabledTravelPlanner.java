@@ -1,10 +1,10 @@
 package dev.thillainirmal.voyageweaver.agent;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConditionalOnMissingBean(TravelPlannerGateway.class)
+@ConditionalOnProperty(name = "voyage.ai.enabled", havingValue = "false", matchIfMissing = true)
 public class DisabledTravelPlanner implements TravelPlannerGateway {
     @Override public String plan(String userId, String prompt) {
         throw new IllegalStateException("Travel AI is disabled. Set VOYAGE_AI_ENABLED=true and GOOGLE_API_KEY.");
