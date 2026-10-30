@@ -40,4 +40,4 @@ The ADK session is intentionally request-scoped; the durable business artifact i
 mvn verify
 ```
 
-Built from course concepts (multi-agent orchestration and production guardrails), with an original domain model, API, security boundary, persistence design, and sustainability/accessibility optimization.
+Designed as an original multi-agent platform with its own domain model, API, security boundary, persistence architecture, and sustainability/accessibility optimization.
